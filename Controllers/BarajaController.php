@@ -33,5 +33,10 @@ class BarajaController
 
     public function sacarCarta(): void
     {
+        $carta = $this->baraja->barajar();
+        $carta = $this->baraja->sacarCarta();
+        if ($carta !== null) {
+            $this->pages->render("baraja/mostrarCarta", ["carta" => $carta]);
+        }
     }
 }

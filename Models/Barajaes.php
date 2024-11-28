@@ -33,4 +33,12 @@ class Barajaes
     {
         shuffle($this->baraja);
     }
+
+    public function sacarCarta()
+    {
+        if (empty($this->baraja)) {
+            return null;
+        }
+        return array_pop($this->baraja);
+    }
 }
